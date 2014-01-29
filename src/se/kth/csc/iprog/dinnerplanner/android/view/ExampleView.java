@@ -5,11 +5,11 @@ import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainView {
+public class ExampleView {
 
 	View view;
 
-	public MainView(View view, DinnerModel model) {
+	public ExampleView(View view, DinnerModel model) {
 
 		// store in the class the reference to the Android View
 		this.view = view;
