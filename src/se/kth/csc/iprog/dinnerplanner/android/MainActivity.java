@@ -16,11 +16,8 @@ public class MainActivity extends Activity {
     	// it must come before any call to findViewById method
         setContentView(R.layout.activity_main);
         
-        // Get the model
-        DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
-        
     	// Creating the view class
-    	ExampleView mainView = new ExampleView(findViewById(R.id.example_view), model);
+    	ExampleView mainView = new ExampleView(findViewById(R.id.example_view));
 
     }
 

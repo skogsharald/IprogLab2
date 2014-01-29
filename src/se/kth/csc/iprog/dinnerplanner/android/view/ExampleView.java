@@ -9,7 +9,7 @@ public class ExampleView {
 
 	View view;
 
-	public ExampleView(View view, DinnerModel model) {
+	public ExampleView(View view) {
 
 		// store in the class the reference to the Android View
 		this.view = view;
