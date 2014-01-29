@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:id="@+id/example_view" >
+    android:id="@+id/this_is_example_view_id" >
 
     <TextView
         android:id="@+id/example_text"
