@@ -3,17 +3,11 @@ package se.kth.csc.iprog.dinnerplanner.model;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DinnerModel {
+public class DinnerModel implements IDinnerModel {
 	
-
+	int numberOfGuests;
+	Set<Dish> selectedDishes = new HashSet<Dish>();
 	Set<Dish> dishes = new HashSet<Dish>();
-	
-	/**
-	 * TODO: For Lab2 you need to implement the IDinnerModel interface.
-	 * When you do this you will have all the needed fields and methods
-	 * for the dinner planner (number of guests, selected dishes, etc.). 
-	 */
-	
 	
 	/**
 	 * The constructor of the overall model. Set the default values here
@@ -93,6 +87,50 @@ public class DinnerModel {
 			}
 		}
 		return result;
+	}
+
+	@Override
+	public int getNumberOfGuests() {
+		return numberOfGuests;
+	}
+
+	@Override
+	public void setNumberOfGuests(int numberOfGuests) {
+		this.numberOfGuests = numberOfGuests;
+	}
+
+	@Override
+	public Dish getSelectedDish(int type) {
+		for(Dish d : selectedDishes){
+			if(d.getType() == type){
+				return d;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Set<Dish> getFullMenu() {
+		return selectedDishes;
+	}
+
+	@Override
+	public Set<Ingredient> getAllIngredients() {
+		Set<Ingredient> ingredients = new HashSet<Ingredient>();
+		for(Dish d : selectedDishes){
+			ingredients.addAll(d.getIngredients());
+		}
+		return ingredients;
+	}
+
+	@Override
+	public float getTotalMenuPrice() {
+		Set<Ingredient> ingredients = getAllIngredients();
+		float totalPrice = 0;
+		for (Ingredient ingredient : ingredients) {
+			totalPrice += ingredient.getPrice();
+		}
+		return totalPrice;
 	}
 	
 	
