@@ -10,6 +10,8 @@
     <string name="description3">Watch Magic Happen!</string>
     <string name="startbutton">Start!</string>
     <string name="numberofguests">Guests</string>
-    <string name="totalcost">Total Cost</string>
+    <string name="totalcost">Total Cost:</string>
+    <string name="kr">kr</string>
+    <string name="choose_menu">Choose menu</string>
 
 </resources>
