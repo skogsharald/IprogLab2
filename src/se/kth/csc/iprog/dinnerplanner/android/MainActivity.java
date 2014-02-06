@@ -1,5 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
+import se.kth.csc.iprog.dinnerplanner.android.view.DialogView;
 import se.kth.csc.iprog.dinnerplanner.android.view.WelcomeView;
 import android.app.Activity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ public class MainActivity extends Activity {
         
     	// Creating the menu header instance
         welcomeView = new WelcomeView(findViewById(R.layout.welcome_view), this);
-    	////DialogView dialogView = new DialogView(findViewById(R.layout.dialog_view), this, this);
+    	//DialogView dialogView = new DialogView(findViewById(R.layout.dialog_view), this, this);
 
     }
     
