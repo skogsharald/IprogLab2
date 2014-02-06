@@ -28,11 +28,11 @@ public class MenuActivity extends Activity {
 				findViewById(R.layout.menu_header_view), model, this);
 		createButtonView = new CreateButtonView(
 				findViewById(R.layout.create_button_view), model, this);
-		courseView1 = new CourseView(findViewById(R.layout.course_view), model,
+		courseView1 = new CourseView(findViewById(R.id.course_view_1), model,
 				Dish.STARTER, this);
-		courseView2 = new CourseView(findViewById(R.layout.course_view), model,
+		courseView2 = new CourseView(findViewById(R.id.course_view_2), model,
 				Dish.MAIN, this);
-		courseView3 = new CourseView(findViewById(R.layout.course_view), model,
+		courseView3 = new CourseView(findViewById(R.id.course_view_3), model,
 				Dish.DESSERT, this);
 	}
 

@@ -14,20 +14,23 @@
         android:layout_height="wrap_content"
         layout="@layout/menu_header_view"/>
     
-    <include 
+    <include
+        android:id="@+id/course_view_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/course_view"/>
+        layout="@layout/course_view" />
     
-    <include 
+    <include
+        android:id="@+id/course_view_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/course_view"/>
+        layout="@layout/course_view" />
     
-    <include 
+    <include
+        android:id="@+id/course_view_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/course_view"/>
+        layout="@layout/course_view" />
 
     <include 
         android:layout_width="match_parent"

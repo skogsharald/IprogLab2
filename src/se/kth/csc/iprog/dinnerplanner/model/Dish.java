@@ -23,6 +23,25 @@ public class Dish {
 		this.description = description;
 	}
 
+	public static final String getTypeString(int type) {
+		String typeString = "";
+		switch (type) {
+		case STARTER:
+			typeString = "Starter";
+			break;
+		case MAIN:
+			typeString = "Main course";
+			break;
+		case DESSERT:
+			typeString = "Dessert";
+			break;
+
+		default:
+			break;
+		}
+		return typeString;
+	}
+
 	public String getName() {
 		return name;
 	}
