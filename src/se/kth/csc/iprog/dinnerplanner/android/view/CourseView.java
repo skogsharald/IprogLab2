@@ -7,6 +7,7 @@ import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import android.app.Activity;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,8 +17,8 @@ public class CourseView {
 	DinnerModel model;
 	int dishType;
 
-	public CourseView(View view, DinnerModel model, int dishType,
-			Activity activity) {
+	public CourseView(View view, final DinnerModel model, int dishType,
+			final Activity activity) {
 		// store in the class the reference to the Android View
 		this.view = view;
 		this.model = model;
@@ -33,7 +34,18 @@ public class CourseView {
 			LinearLayout courseElement = (LinearLayout) View.inflate(
 					activity.getBaseContext(), R.layout.course_element, null);
 			container.addView(courseElement, 0);
-			ImageView image = (ImageView) view.findViewById(R.id.course_image);
+			final ImageView image = (ImageView) view
+					.findViewById(R.id.course_image);
+			final Dish dishForDialog = dish;
+			image.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					DialogView dialogView = new DialogView(activity
+							.findViewById(R.layout.dialog_view), activity,
+							model, dishForDialog);
+				}
+			});
 			TextView name = (TextView) view.findViewById(R.id.course_name);
 			image.setImageResource(dish.getImage());
 			name.setText(dish.getName());
