@@ -2,6 +2,7 @@ package se.kth.csc.iprog.dinnerplanner.android.view;
 
 import se.kth.csc.iprog.dinnerplanner.android.MenuActivity;
 import se.kth.csc.iprog.dinnerplanner.android.R;
+import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,12 +15,14 @@ public class DialogView {
 	View view;
 	Context context;
 	Activity activity;
+	DinnerModel model;
 	
-	public DialogView(View view, Context context, final Activity activity){
+	public DialogView(View view, Context context, final Activity activity, DinnerModel model){
 		// store in the class the reference to the Android View
 		this.view = view;
 		this.context = context;
 		this.activity = activity;
+		this.model = model;
 		
 		LayoutInflater inflater = LayoutInflater.from(context);
 		
