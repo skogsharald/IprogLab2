@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:text="@string/choose_menu"
         android:textAppearance="?android:attr/textAppearanceLarge" 
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="3dp"/>
 
     <TextView
         android:id="@+id/textView5"
