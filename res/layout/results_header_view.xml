@@ -10,11 +10,11 @@
 
         <Button
             android:id="@+id/back_button"
+            style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle"
             android:background="@drawable/button_shape"
-            android:text="Back" />
+            android:text="@string/back" />
 
         <TextView
             android:id="@+id/results_total_cost_text"
@@ -83,6 +83,7 @@
                     android:id="@+id/ingredients_image_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/ingredients"
                     android:src="@drawable/ingredients" />
 
                 <TextView
@@ -106,13 +107,14 @@
                     android:id="@+id/results_starter_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/starter"
                     android:src="@drawable/bakedbrie_small" />
 
                 <TextView
                     android:id="@+id/results_head_starter_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Starter"
+                    android:text="@string/starter"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -128,13 +130,14 @@
                     android:id="@+id/results_main_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/main_course"
                     android:src="@drawable/meatballs_small" />
 
                 <TextView
                     android:id="@+id/results_head_main_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Main"
+                    android:text="@string/main_course"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -149,13 +152,15 @@
                     android:id="@+id/results_dessert_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/dessert"
+                    android:text="@string/dessert"
                     android:src="@drawable/icecream_small" />
 
                 <TextView
                     android:id="@+id/results_head_dessert_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dessert"
+                    android:text="@string/dessert"
                     android:textSize="12sp" />
 
             </LinearLayout>

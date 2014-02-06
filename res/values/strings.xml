@@ -25,5 +25,9 @@
     <string name="dialog_cost_per_person_string">20</string>
     <string name="dialog_rest_text">kr / person)</string>
     <string name="left_parenthesis">(</string>
+    <string name="back">Back</string>
+    <string name="starter">Starter</string>
+    <string name="main_course">Main course</string>
+    <string name="dessert">Dessert</string>
 
 </resources>
