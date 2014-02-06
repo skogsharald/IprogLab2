@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
     	
     	// Set the view for the main activity screen
     	// it must come before any call to findViewById method
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
         
     	// Creating the menu header instance
         welcomeView = new WelcomeView(findViewById(R.layout.welcome_view), this);
