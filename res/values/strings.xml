@@ -16,5 +16,7 @@
     <string name="title_activity_menu">MenuActivity</string>
     <string name="create_button">Create</string>
     <string name="title_activity_results">ResultsActivity</string>
+    <string name="instructions">Instructions</string>
+    <string name="ingredients">Ingredients</string>
 
 </resources>
