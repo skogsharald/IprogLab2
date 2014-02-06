@@ -1,14 +1,11 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
-import se.kth.csc.iprog.dinnerplanner.android.view.MenuHeaderView;
 import se.kth.csc.iprog.dinnerplanner.android.view.WelcomeView;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 
 public class MainActivity extends Activity {
 	WelcomeView welcomeView;
-	MenuHeaderView menuHeaderView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +18,6 @@ public class MainActivity extends Activity {
         
     	// Creating the menu header instance
         welcomeView = new WelcomeView(findViewById(R.layout.welcome_view), this);
-    	menuHeaderView = new MenuHeaderView(findViewById(R.layout.menu_header_view));
     	
 
     }
