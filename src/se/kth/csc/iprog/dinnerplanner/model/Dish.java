@@ -11,15 +11,15 @@ public class Dish {
 	
 	String name;
 	int type; // starter (1), main (2) or desert (3)  
-	String image;
+	int imageID;
 	String description;
 	
 	Set<Ingredient> ingredients = new HashSet<Ingredient>();
 	
-	public Dish(String name, int type, String image, String description) {
+	public Dish(String name, int type, int image, String description) {
 		this.name = name;
 		this.type = type;
-		this.image = image;
+		this.imageID = image;
 		this.description = description;
 	}
 	
@@ -35,11 +35,11 @@ public class Dish {
 	public void setType(int type) {
 		this.type = type;
 	}
-	public String getImage() {
-		return image;
+	public int getImage() {
+		return imageID;
 	}
-	public void setImage(String image) {
-		this.image = image;
+	public void setImage(int image) {
+		this.imageID = image;
 	}
 	public String getDescription() {
 		return description;
