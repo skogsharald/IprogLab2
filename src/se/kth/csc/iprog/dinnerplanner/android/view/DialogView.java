@@ -13,20 +13,18 @@ import android.view.View;
 
 public class DialogView {
 	View view;
-	Context context;
-	Activity activity;
 	DinnerModel model;
+	Activity activity;
 	
-	public DialogView(View view, Context context, final Activity activity, DinnerModel model){
+	public DialogView(View view, final Activity activity, DinnerModel model){
 		// store in the class the reference to the Android View
 		this.view = view;
-		this.context = context;
 		this.activity = activity;
 		this.model = model;
 		
-		LayoutInflater inflater = LayoutInflater.from(context);
+		LayoutInflater inflater = LayoutInflater.from(activity.getBaseContext());
 		
-		AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+		AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity.getBaseContext());
 
         alertDialog.setView(inflater.inflate(R.layout.dialog_view, null));
  
