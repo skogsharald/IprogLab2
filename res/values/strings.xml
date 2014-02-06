@@ -18,5 +18,12 @@
     <string name="title_activity_results">ResultsActivity</string>
     <string name="instructions">Instructions</string>
     <string name="ingredients">Ingredients</string>
+    <string name="cost_text">"Cost: "</string>
+    <string name="_80">80</string>
+    <string name="currency_text">kr</string>
+    <string name="right_parenthesis">(</string>
+    <string name="dialog_cost_per_person_string">20</string>
+    <string name="dialog_rest_text">kr / person)</string>
+    <string name="left_parenthesis">(</string>
 
 </resources>

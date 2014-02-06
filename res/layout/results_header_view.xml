@@ -12,6 +12,8 @@
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/ButtonStyle"
+            android:background="@drawable/button_shape"
             android:text="Back" />
 
         <TextView
@@ -153,7 +155,8 @@
                     android:id="@+id/results_head_dessert_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dessert" />
+                    android:text="Dessert"
+                    android:textSize="12sp" />
 
             </LinearLayout>
         </LinearLayout>
