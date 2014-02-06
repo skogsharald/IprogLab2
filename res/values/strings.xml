@@ -13,9 +13,9 @@
     <string name="totalcost">Total Cost:</string>
     <string name="kr">kr</string>
     <string name="choose_menu">Choose menu</string>
-    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu">Menu</string>
     <string name="create_button">Create</string>
-    <string name="title_activity_results">ResultsActivity</string>
+    <string name="title_activity_results">Results</string>
     <string name="instructions">Instructions</string>
     <string name="ingredients">Ingredients</string>
     <string name="cost_text">"Cost: "</string>
