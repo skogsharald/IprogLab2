@@ -15,21 +15,25 @@ public class MenuActivity extends Activity {
 	CourseView courseView1;
 	CourseView courseView2;
 	CourseView courseView3;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu);
-		
+
 		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
-		
+
 		// Create the view instances
-		menuHeaderView = new MenuHeaderView(findViewById(R.layout.menu_header_view),model, this);
-		createButtonView = new CreateButtonView(findViewById(R.layout.create_button_view), model, this);
-		courseView1 = new CourseView(findViewById(R.layout.course_view), model, Dish.STARTER, this);
-		courseView2 = new CourseView(findViewById(R.layout.course_view), model, Dish.MAIN, this);
-		//courseView3 = new CourseView(findViewById(R.layout.course_view), model, Dish.DESERT, this);
+		menuHeaderView = new MenuHeaderView(
+				findViewById(R.layout.menu_header_view), model, this);
+		createButtonView = new CreateButtonView(
+				findViewById(R.layout.create_button_view), model, this);
+		courseView1 = new CourseView(findViewById(R.layout.course_view), model,
+				Dish.STARTER, this);
+		courseView2 = new CourseView(findViewById(R.layout.course_view), model,
+				Dish.MAIN, this);
+		courseView3 = new CourseView(findViewById(R.layout.course_view), model,
+				Dish.DESSERT, this);
 	}
-
-
 
 }
