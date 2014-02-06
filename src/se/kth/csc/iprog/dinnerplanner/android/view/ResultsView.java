@@ -41,7 +41,7 @@ public class ResultsView {
 		});
 		
 		//This is hard-coded for now
-		instructionHeader.setText("@string/dessert");
+		instructionHeader.setText(R.string.dessert);
 		StringBuilder sb = new StringBuilder();
 		sb.append(model.getNumberOfGuests() + " attendees\n");
 		sb.append("\n");

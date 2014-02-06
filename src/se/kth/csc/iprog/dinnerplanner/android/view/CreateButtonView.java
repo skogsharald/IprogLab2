@@ -19,7 +19,6 @@ public class CreateButtonView {
 		this.view = view;
 		this.activity = activity;
 		this.model = model;
-		menuHeaderView = new MenuHeaderView(activity.findViewById(R.layout.menu_header_view), activity);
 
 
 		// Setup the rest of the view layout, with an onClickListener for the create button
@@ -28,8 +27,6 @@ public class CreateButtonView {
 
 			@Override
 			public void onClick(View v) {
-				model.setNumberOfGuests(menuHeaderView.getNumberOfGuests());
-				menuHeaderView.populateTotalCost(""+model.getTotalMenuPrice());
 				Intent intent = new Intent(activity, ResultsActivity.class);
 				activity.startActivity(intent);
 
