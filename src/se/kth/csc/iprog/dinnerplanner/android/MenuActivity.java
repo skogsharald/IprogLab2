@@ -1,8 +1,10 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
+import se.kth.csc.iprog.dinnerplanner.android.view.CourseView;
 import se.kth.csc.iprog.dinnerplanner.android.view.CreateButtonView;
 import se.kth.csc.iprog.dinnerplanner.android.view.MenuHeaderView;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
+import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -10,6 +12,9 @@ public class MenuActivity extends Activity {
 	MenuHeaderView menuHeaderView;
 	CreateButtonView createButtonView;
 	DinnerModel model;
+	CourseView courseView1;
+	CourseView courseView2;
+	CourseView courseView3;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,8 +23,10 @@ public class MenuActivity extends Activity {
 		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 		
 		// Create the view instances
-		menuHeaderView = new MenuHeaderView(findViewById(R.layout.menu_header_view), model);
-		createButtonView = new CreateButtonView(findViewById(R.layout.create_button_view), this);
+		createButtonView = new CreateButtonView(findViewById(R.layout.create_button_view), model, this);
+		courseView1 = new CourseView(findViewById(R.layout.course_view), model, Dish.STARTER, this);
+		courseView2 = new CourseView(findViewById(R.layout.course_view), model, Dish.MAIN, this);
+		//courseView3 = new CourseView(findViewById(R.layout.course_view), model, Dish.DESERT, this);
 	}
 
 

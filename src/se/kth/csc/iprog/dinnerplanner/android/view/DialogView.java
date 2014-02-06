@@ -33,7 +33,8 @@ public class DialogView {
  
         // Setting Positive "Yes" Button
         alertDialog.setPositiveButton("Choose", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog,int which) {
+            @Override
+			public void onClick(DialogInterface dialog,int which) {
             	Intent intent = new Intent(activity, MenuActivity.class);
 				activity.startActivity(intent);
             }
@@ -41,7 +42,8 @@ public class DialogView {
  
         // Setting Negative "NO" Button
         alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
+            @Override
+			public void onClick(DialogInterface dialog, int which) {
             	dialog.cancel();
             }
         });
