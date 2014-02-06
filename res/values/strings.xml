@@ -14,5 +14,6 @@
     <string name="kr">kr</string>
     <string name="choose_menu">Choose menu</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="create_button">Create</string>
 
 </resources>

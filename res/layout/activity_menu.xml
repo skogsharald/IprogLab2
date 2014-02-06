@@ -29,4 +29,8 @@
         android:layout_height="wrap_content"
         layout="@layout/course_view"/>
 
+    <include 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/create_button_view"/>
 </LinearLayout>
