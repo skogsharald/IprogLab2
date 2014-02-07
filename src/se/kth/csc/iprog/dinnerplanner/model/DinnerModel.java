@@ -106,6 +106,75 @@ public class DinnerModel implements IDinnerModel {
 				R.drawable.icecream,
 				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
 		dishes.add(dish6);
+
+		Dish dish7 = new Dish(
+				"Ice cream",
+				Dish.DESSERT,
+				R.drawable.icecream,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish7);
+
+		Dish dish8 = new Dish(
+				"Sour dough",
+				Dish.DESSERT,
+				R.drawable.sourdough,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish8);
+
+		Dish dish9 = new Dish(
+				"Sour dough",
+				Dish.DESSERT,
+				R.drawable.sourdough,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish9);
+
+		Dish dish10 = new Dish(
+				"French toast 2",
+				Dish.STARTER,
+				R.drawable.toast,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish10);
+
+		Dish dish11 = new Dish(
+				"French toast 3",
+				Dish.STARTER,
+				R.drawable.toast,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish11);
+
+		Dish dish12 = new Dish(
+				"French toast 4",
+				Dish.STARTER,
+				R.drawable.toast,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish12);
+
+		Dish dish13 = new Dish(
+				"French toast 5",
+				Dish.STARTER,
+				R.drawable.toast,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish13);
+
+		Dish dish14 = new Dish(
+				"French toast 6",
+				Dish.STARTER,
+				R.drawable.toast,
+				"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
+		dishes.add(dish14);
+
+		dish4.addIngredient(dish2ing2);
+		dish5.addIngredient(dish2ing2);
+		dish6.addIngredient(dish2ing2);
+		dish7.addIngredient(dish2ing2);
+		dish8.addIngredient(dish2ing2);
+		dish9.addIngredient(dish2ing2);
+		dish10.addIngredient(dish2ing2);
+		dish11.addIngredient(dish2ing2);
+		dish12.addIngredient(dish2ing2);
+		dish13.addIngredient(dish2ing2);
+		dish14.addIngredient(dish2ing2);
+
 	}
 
 	/**
