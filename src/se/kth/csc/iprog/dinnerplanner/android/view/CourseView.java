@@ -6,8 +6,12 @@ import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.PorterDuff.Mode;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,6 +41,25 @@ public class CourseView {
 			final ImageView image = (ImageView) view
 					.findViewById(R.id.course_image);
 			final Dish dishForDialog = dish;
+			image.setOnTouchListener(new OnTouchListener() {
+
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					switch (event.getAction()) {
+					case MotionEvent.ACTION_DOWN:
+						image.setColorFilter(Color.parseColor("#EDEDCC"),
+								Mode.SCREEN);
+						break;
+					case MotionEvent.ACTION_UP:
+						image.clearColorFilter();
+						break;
+					case MotionEvent.ACTION_MOVE:
+						image.clearColorFilter();
+					}
+					return false;
+				}
+			});
+
 			image.setOnClickListener(new OnClickListener() {
 
 				@Override
