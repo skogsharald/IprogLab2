@@ -1,14 +1,15 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
-import se.kth.csc.iprog.dinnerplanner.android.MenuActivity;
+import java.util.Set;
+
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
+import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,14 +23,21 @@ public class DialogView {
 	Context context;
 	private Dish dish;
 
-	public DialogView(View view, final Activity activity, DinnerModel model,
-			Dish dish) {
+	public DialogView(View view, final Activity activity, final DinnerModel model,
+			final Dish dish) {
 		// store in the class the reference to the Android View
 		this.view = view;
 		this.activity = activity;
 		this.model = model;
 		this.context = activity;
 		this.dish = dish;
+		
+		Set<Ingredient> ingredients = dish.getIngredients();
+		int costPerPerson = 0;
+		//Calculate cost per person
+		for(Ingredient ingredient: ingredients){
+			costPerPerson += ingredient.getPrice();
+		}
 
 		LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -44,24 +52,18 @@ public class DialogView {
 		head.setText(dish.getName());
 		TextView cost = (TextView) dialogLayout
 				.findViewById(R.id.dialog_total_cost);
-		cost.setText("100"); // TODO: Calculate the actual cost based on the
-								// ingredients in the dish and the number of
-								// guests
+		//Total cost for all guests
+		cost.setText(Integer.toString(costPerPerson*model.getNumberOfGuests()));
 		TextView perPersoncost = (TextView) dialogLayout
 				.findViewById(R.id.dialog_cost_per_person);
-		perPersoncost.setText("30"); // TODO Calculate this based on model as
-										// well
-
-		// Setting Dialog Message
-		// alertDialog.setMessage("Are you sure you want delete this?");
+		perPersoncost.setText(Integer.toString(costPerPerson));//Cost per person
 
 		// Setting Positive "Yes" Button
 		alertDialog.setPositiveButton("Choose",
 				new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						Intent intent = new Intent(activity, MenuActivity.class);
-						activity.startActivity(intent);
+						dialog.cancel();
 					}
 				});
 
