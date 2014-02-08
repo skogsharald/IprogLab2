@@ -20,6 +20,7 @@ public class CourseView {
 	View view;
 	DinnerModel model;
 	int dishType;
+	MenuHeaderView menuHeaderView;
 
 	public CourseView(View view, final DinnerModel model, int dishType,
 			final Activity activity) {
@@ -27,6 +28,9 @@ public class CourseView {
 		this.view = view;
 		this.model = model;
 		this.dishType = dishType;
+		
+		// Create the header view, which needs to be controlled from the dialog view as well
+		menuHeaderView = new MenuHeaderView(activity.findViewById(R.layout.menu_header_view), model, activity);
 
 		// Setup the rest of the view layout
 		TextView header = (TextView) view.findViewById(R.id.course_type_header);
@@ -66,7 +70,7 @@ public class CourseView {
 				public void onClick(View v) {
 					DialogView dialogView = new DialogView(activity
 							.findViewById(R.layout.dialog_view), activity,
-							model, dishForDialog);
+							model, dishForDialog, menuHeaderView);
 				}
 			});
 			TextView name = (TextView) view.findViewById(R.id.course_name);

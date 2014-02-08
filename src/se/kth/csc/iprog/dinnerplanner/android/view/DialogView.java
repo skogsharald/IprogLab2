@@ -21,16 +21,21 @@ public class DialogView {
 	DinnerModel model;
 	Activity activity;
 	Context context;
+	TextView totalCost;
 	private Dish dish;
+	MenuHeaderView menuHeaderView;
 
 	public DialogView(View view, final Activity activity, final DinnerModel model,
-			final Dish dish) {
+			final Dish dish, final MenuHeaderView menuHeaderView) {
 		// store in the class the reference to the Android View
 		this.view = view;
 		this.activity = activity;
 		this.model = model;
 		this.context = activity;
 		this.dish = dish;
+		this.menuHeaderView = menuHeaderView;
+		
+		totalCost = (TextView) activity.findViewById(R.id.menu_total_cost_label);
 		
 		Set<Ingredient> ingredients = dish.getIngredients();
 		int costPerPerson = 0;
@@ -63,6 +68,10 @@ public class DialogView {
 				new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
+						// Add this dish to the set of selected dishes here
+						
+						// Update value of total cost field
+						menuHeaderView.setTotalCostField(model.getTotalMenuPrice()*model.getNumberOfGuests());;
 						dialog.cancel();
 					}
 				});

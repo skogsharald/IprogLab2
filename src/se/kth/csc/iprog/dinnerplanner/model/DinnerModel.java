@@ -174,6 +174,9 @@ public class DinnerModel implements IDinnerModel {
 		dish12.addIngredient(dish2ing2);
 		dish13.addIngredient(dish2ing2);
 		dish14.addIngredient(dish2ing2);
+		
+		//Hard coded to even get some data to results page
+		selectedDishes.add(dish2);
 
 	}
 

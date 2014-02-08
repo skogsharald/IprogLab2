@@ -32,6 +32,7 @@ public class MenuHeaderView {
 				//Wow. Such code.
 				try{
 					model.setNumberOfGuests(Integer.parseInt(s.toString()));
+					costField.setText(Float.toString(model.getTotalMenuPrice()*model.getNumberOfGuests()));
 				} catch(Exception e){
 					model.setNumberOfGuests(0);
 				}
@@ -53,6 +54,16 @@ public class MenuHeaderView {
 			}
 
 		});
+		
+	}
+	
+	/**
+	 * To be able to set the value of the total cost field from dialog view
+	 * (When user chooses a dish)
+	 * @param value
+	 */
+	public void setTotalCostField(Float value){
+		costField.setText(Float.toString(value));
 	}
 
 }

@@ -24,8 +24,6 @@ public class MenuActivity extends Activity {
 		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
 		// Create the view instances
-		menuHeaderView = new MenuHeaderView(
-				findViewById(R.layout.menu_header_view), model, this);
 		createButtonView = new CreateButtonView(
 				findViewById(R.layout.create_button_view), model, this);
 		courseView1 = new CourseView(findViewById(R.id.course_view_1), model,

@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/starter"
-                    android:src="@drawable/bakedbrie_small" />
+                    android:src="@drawable/notselected" />
 
                 <TextView
                     android:id="@+id/results_head_starter_name"
@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/main_course"
-                    android:src="@drawable/meatballs_small" />
+                    android:src="@drawable/notselected" />
 
                 <TextView
                     android:id="@+id/results_head_main_name"
@@ -153,8 +153,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/dessert"
-                    android:text="@string/dessert"
-                    android:src="@drawable/icecream_small" />
+                    android:src="@drawable/notselected"
+                    android:text="@string/dessert" />
 
                 <TextView
                     android:id="@+id/results_head_dessert_name"
