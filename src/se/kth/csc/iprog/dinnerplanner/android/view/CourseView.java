@@ -53,7 +53,7 @@ public class CourseView {
 					case MotionEvent.ACTION_UP:
 						image.clearColorFilter();
 						break;
-					case MotionEvent.ACTION_MOVE:
+					case MotionEvent.ACTION_CANCEL:
 						image.clearColorFilter();
 					}
 					return false;
